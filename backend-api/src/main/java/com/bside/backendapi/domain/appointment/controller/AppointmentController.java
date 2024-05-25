@@ -43,6 +43,7 @@ public class AppointmentController {
     @PostMapping("/searchSingleAppointment/{uaid}")
     public ResponseEntity<AppointmentDTO> searchSingleAppointment(@PathVariable("uaid") long uaid) {
         AppointmentDTO appointmentDTO = appointmentService.searchSingleAppointment(uaid);
+
         return ResponseEntity.ok(appointmentDTO);
     }
 
